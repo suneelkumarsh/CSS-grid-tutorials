@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desktop Layout</title>
+
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>responsive layout</title>
+
+        <style type="text/css">
+
+body {
+  margin: 0;
+  padding:0;
+  
+}
+
+
+      /* Desktop view */
+      @media screen and (min-width: 760px){
+
+        .main-container {
+          width: 980px;
+          margin: 0 auto;
+
+          display: grid; /* block level grid container */
+          grid-template-columns: repeat(4, 1fr);
+          grid-auto-rows: minmax(80px, auto);
+          grid-gap: 20px;
+
+          grid-template-areas: 
+            "headerArea headerArea headerArea headerArea"
+            "asideArea asideArea mainArea mainArea "
+            "navArea navArea mainArea mainArea "
+            "sectionArea sectionArea sectionArea sectionArea"
+            "sectionArea sectionArea sectionArea sectionArea"
+            "footerArea footerArea footerArea footerArea";
+        }
+      }
+
+      .main-container > * {
+        background-color: #00bcd4;
+        padding:20px;
+        color:#fff;
+        font-family: verdana;
+        font-size: 1rem;
+        text-align: center;
+      }
+      .header-section {
+        grid-area:headerArea;
+        background-color: #0199ad;
+      }
+
+      .main-section {
+        grid-area: mainArea;
+      }
+
+      .section {
+        grid-area: sectionArea;
+      }
+
+      .aside-section {
+        grid-area: asideArea;
+      }
+
+      .nav-section {
+        grid-area: navArea;
+      }
+
+      .footer-section {
+        grid-area: footerArea;
+        background-color: #0199ad;
+      }
+
+      /* mobile-view */ 
+
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+   <header class="header-section"><h1>Header Section</h1></header>
+   <aside class="aside-section">Aside Section</aside>
+    <main class="main-section">Main Section</main>
+    <nav class="nav-section">Navigation Section</nav>
+    <section class="section">Section Section</section>
+    <footer class="footer-section">Footer Section</footer>
+    </div>
+    
+  </body>
+  
+</html>
